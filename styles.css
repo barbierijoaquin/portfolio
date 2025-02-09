@@ -217,7 +217,7 @@ html{
 
  /*SKILLS SECTION*/
  .skills{
-    background-color: #252a2e;
+    background-color: #1e2326;
     color: #fff;
     padding: 50px 20px;
 }
@@ -285,7 +285,7 @@ html{
 }
 .skills .skill .postgresqlmysql{
     width: 0%;
-    animation: 2s jpostgresqlmysql forwards;
+    animation: 2s postgresqlmysql forwards;
 }
 @keyframes postgresqlmysql {
     0%{width: 0%;}
@@ -576,39 +576,63 @@ footer .arriba{
 /* Media Queries */
 
 /* Para pantallas pequeñas (móviles y tablets en orientación vertical) */
-@media (max-width: 768px) {
-    .contenedor-header header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
 
-    nav ul {
+
+@media (max-width: 980px) {
+    nav{
         display: none;
-        flex-direction: column;
     }
-
-    .nav-responsive {
+    .nav-responsive{
         display: block;
     }
-
-    .contenedor-header header .logo a {
-        font-size: 28px;
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252a2e;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
     }
 }
-
-/* Para pantallas más grandes (escritorios y tablets en orientación horizontal) */
-@media (min-width: 769px) {
-    .contenedor-header header {
-        flex-direction: row;
+@media (max-width: 700px) {
+    .aboutme .fila{
+        display: block;
+    }
+    .aboutme .fila -col{
+        width: fit-content;
+    }
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
+    }
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
+    .projects .galeria{
+        display: block;
+        width: 100%;
+    }
+    .projects .galeria .project{
+        max-width: 100%;
+    }
+    .projects .galeria .project img{
+        max-width: 100%;
+    }
+    .contact .fila{
+        display: flex;
+        flex-wrap: wrap; /* Permite que las columnas se ajusten en pantallas pequeñas */
         justify-content: space-between;
     }
-
-    nav ul {
-        display: flex;
-    }
-
-    .nav-responsive {
-        display: none;
+    .contact .fila .col{
+        width: 45%; 
     }
 }
